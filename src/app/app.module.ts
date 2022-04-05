@@ -12,20 +12,24 @@ import { counterReducer } from './store/counter.store';
 @Component({
   selector: 'app-root',
   template: `
-    <h1>Counter State management</h1>
-    <h3>User Status</h3>
-    <button (click)="logout()">Logout</button>
-    <pre>{{ auth$ | async | json }}</pre>
-    <nav style="text-decoration-line: none; ">
-      <a [routerLink]="['/home']">Home</a>
-    </nav>
-    <router-outlet></router-outlet>
+    <div class="m-[10%]">
+      <h1>Counter State management</h1>
+      <h3>User Status</h3>
+      <button (click)="logout()">Logout</button>
+      <pre>{{ auth$ | async | json }}</pre>
+      <nav style="text-decoration-line: none; ">
+        <a [routerLink]="['/home']">Home</a>
+      </nav>
+      <router-outlet></router-outlet>
+    </div>
   `,
   styles: [
     `
-      a {
-        text-decoration: none;
-        padding: 10px;
+      h1 {
+        @apply font-bold text-4xl;
+      }
+      h3 {
+        @apply font-bold text-2xl;
       }
     `
   ]

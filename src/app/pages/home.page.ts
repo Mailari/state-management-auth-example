@@ -8,7 +8,7 @@ import { CounterComponent } from '../utils/counter.component';
   selector: 'app-home',
   template: `<h1>Home</h1>
     <app-counter> </app-counter>
-    <pre>{{ (auth | async)?.user | json }}</pre>`
+    <pre class=" bg-zinc-800 text-white">{{ (auth | async)?.user | json }}</pre>`
 })
 export class HomeComponent {
   auth: Observable<any>;

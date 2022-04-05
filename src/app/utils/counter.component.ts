@@ -4,8 +4,8 @@ import { Observable } from 'rxjs';
 import { decrement, increment, reset } from '../store/counter.store';
 @Component({
   selector: 'app-counter',
-  template: `<h1>Counter</h1>
-    <button (click)="increment()">Increment</button>
+  template: `<h1 class="text-5xl">Counter</h1>
+    <button class="" (click)="increment()">Increment</button>
     <div>Current Count: {{ count$ | async }}</div>
     <button (click)="decrement()">Decrement</button>
     <button (click)="reset()">Reset Counter</button> `
